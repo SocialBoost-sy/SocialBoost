@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Growth Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Social Growth Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Boost Your Social Media Game</h2>
+                <p>Discover effective, organic methods to increase your followers and engagement.</p>
+                <a href="#tips" class="cta-button">Learn More</a>
+            </div>
+            <img src="https://via.placeholder.com/800x400" alt="Social Media Growth" class="hero-image">
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="container">
+            <h2>Daily Growth Tips</h2>
+            <div id="tipDisplay">
+                <p id="randomTip">Click the button below to get a new tip!</p>
+            </div>
+            <button id="generateTip" class="btn-primary">Get a Random Tip</button>
+            <ul id="savedTips" class="saved-tips">
+                <h3>Saved Tips:</h3>
+            </ul>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics" class="container">
+            <h2>Your Growth Analytics</h2>
+            <canvas id="growthChart"></canvas>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="container">
+            <h2>Optimization Tools</h2>
+            <div class="tool">
+                <h3>Hashtag Research</h3>
+                <input type="text" id="hashtagInput" placeholder="Enter a topic...">
+                <button id="hashtagButton" class="btn-primary">Get Hashtags</button>
+                <div id="hashtagResults" class="results"></div>
+            </div>
+            <div class="tool">
+                <h3>Best Time to Post</h3>
+                <p>Based on engagement data, the best time for your next post is:</p>
+                <div id="bestTime" class="highlight">--:--</div>
+                <button id="updateTime" class="btn-primary">Refresh Time</button>
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login" class="container">
+            <h2>Login / Register</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#register" id="showRegisterForm">Register here</a></p>
+            <form id="registerForm" class="hidden">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" required>
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" required>
+                <button type="submit" class="btn-secondary">Register</button>
+            </form>
+            <p id="loginStatus"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Social Growth Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
